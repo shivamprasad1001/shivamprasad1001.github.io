@@ -1,0 +1,82 @@
+---
+layout: default
+title: Home
+---
+
+<!-- AI Banner -->
+<!-- <img src="https://your-image-url.com/ai-banner.png" style="width:100%; border-radius:12px;"> -->
+
+<h1>🤖 Shivam Prasad – AI Developer’s Lab</h1>
+
+<p>Hi there! I'm <strong>Shivam Prasad</strong>, an AI/ML Developer with a passion for intelligent systems, smart automation, and secure coding.</p>
+
+<h2><span id="typing"></span><span class="cursor">|</span></h2>
+
+<p>I also dive into Web Development and Cybersecurity to make things not only smart — but also safe and usable.</p>
+
+<hr>
+
+<h2>🧠 What I Write About</h2>
+<ul>
+  <li>Machine Learning, LLMs, Computer Vision</li>
+  <li>SSH, Netcat, and Linux Hacking Tools</li>
+  <li>Web + AI Projects (Flask, APIs)</li>
+  <li>Real-World Debugging, Deployment & More</li>
+</ul>
+
+<hr>
+
+<h2>📘 Latest Blog Post</h2>
+<ul>
+  <li>📖 <a href="./posts/ssh-nc-handbook.md">SSH-NC Handbook</a></li>
+</ul>
+
+<hr>
+
+<h2>🔗 Let’s Connect</h2>
+<ul>
+  <li>GitHub → <a href="https://github.com/shivamprasad1001">@shivamprasad1001</a></li>
+</ul>
+
+<!-- Typing Effect Script -->
+<script>
+const words = ["AI Developer", "ML Engineer", "Open-Source Builder", "Web Hacker", "Linux Ninja"];
+let i = 0, j = 0, currentWord = "", isDeleting = false;
+
+function type() {
+  currentWord = words[i];
+  const typingElement = document.getElementById("typing");
+
+  if (isDeleting) {
+    typingElement.textContent = currentWord.substring(0, j--);
+  } else {
+    typingElement.textContent = currentWord.substring(0, j++);
+  }
+
+  if (!isDeleting && j === currentWord.length) {
+    isDeleting = true;
+    setTimeout(type, 1000);
+  } else if (isDeleting && j === 0) {
+    isDeleting = false;
+    i = (i + 1) % words.length;
+    setTimeout(type, 500);
+  }
+
+  setTimeout(type, isDeleting ? 50 : 100);
+}
+
+type();
+</script>
+
+<style>
+.cursor {
+  font-weight: bold;
+  font-size: 24px;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+</style>
