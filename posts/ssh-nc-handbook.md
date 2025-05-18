@@ -1,6 +1,7 @@
+---
 layout: default
-title: "SSH-NC Handbook: A Simple Guide to Remote Access & File Transfer"
-date: 2025-05-18
+title: SSH-NC Handbook
+permalink: /ssh-nc-handbook/
 ---
 
 # 🔐 SSH-NC Handbook: A Simple Guide to Remote Access & File Transfer
