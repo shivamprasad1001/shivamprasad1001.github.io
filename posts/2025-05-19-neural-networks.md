@@ -1,5 +1,7 @@
-Great! Here's a professional GitHub blog post on the topic **"Neural Networks"**, tailored for developers. It's informative, polished, and written with a developer audience in mind:
-
+title: "Understanding Neural Networks: A Developer's Perspective"
+date: 2025-05-19
+author: Shivam Prasad
+tags: [Neural Networks, Deep Learning, AI, Machine Learning, Developers]
 ---
 
 # 🧠 Understanding Neural Networks: A Developer's Perspective
@@ -14,9 +16,9 @@ In this post, I’ll break down the fundamentals of neural networks from a devel
 
 A neural network is a **computational model inspired by the human brain**, designed to recognize patterns and solve complex tasks. At its core, it consists of:
 
-* **Input Layer**: Receives raw data (e.g., pixels, features)
-* **Hidden Layers**: Perform computations via weighted connections and activation functions
-* **Output Layer**: Produces predictions or classifications
+- **Input Layer**: Receives raw data (e.g., pixels, features)  
+- **Hidden Layers**: Perform computations via weighted connections and activation functions  
+- **Output Layer**: Produces predictions or classifications
 
 Each layer is made up of **neurons (nodes)** connected with **weights** and modified by **biases** and **activation functions**.
 
@@ -42,9 +44,9 @@ Ideal for sequential data like time series or natural language. They use feedbac
 
 Neural networks learn via a process called **backpropagation**:
 
-1. **Forward Pass**: Input data passes through the network to produce an output.
-2. **Loss Calculation**: The error is measured using a loss function (e.g., MSE, cross-entropy).
-3. **Backward Pass**: The network adjusts weights using gradient descent and the chain rule.
+1. **Forward Pass**: Input data passes through the network to produce an output.  
+2. **Loss Calculation**: The error is measured using a loss function (e.g., MSE, cross-entropy).  
+3. **Backward Pass**: The network adjusts weights using gradient descent and the chain rule.  
 4. **Optimization**: Learning rate, batch size, and epochs influence how the model converges.
 
 ```python
@@ -56,7 +58,7 @@ model = nn.Sequential(
     nn.ReLU(),
     nn.Linear(128, 10)
 )
-```
+````
 
 ---
 
@@ -93,7 +95,3 @@ Feel free to connect, contribute, or share thoughts!
 ---
 
 *Written by Shivam Prasad – AI/ML Developer & Creator of MoodifyAI*
-
----
-
-Would you like this post in Markdown format ready for GitHub Pages or Jekyll Blog?
