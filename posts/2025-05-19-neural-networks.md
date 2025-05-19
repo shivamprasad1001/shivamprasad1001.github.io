@@ -1,6 +1,7 @@
 title: "Understanding Neural Networks: A Developer's Perspective"
 date: 2025-05-19
 author: Shivam Prasad
+permalink: /2025-05-19-neural-networks/
 tags: [Neural Networks, Deep Learning, AI, Machine Learning, Developers]
 ---
 
