@@ -1,7 +1,8 @@
+
 # How to Write Your First Neural Network: A Complete Beginner's Guide
 
 *Published on May 22, 2025*
-
+[← back](./)
 Welcome to the exciting world of neural networks! If you've ever wondered how machines can learn to recognize images, understand speech, or even play games better than humans, you're about to discover the magic behind it all. Today, we'll build your very first neural network from scratch – no PhD in mathematics required!
 
 ## What Exactly Is a Neural Network?
