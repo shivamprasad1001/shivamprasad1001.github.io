@@ -6,6 +6,24 @@ permalink: /Your_First_Neural_Network/
 tags: [Neural Networks, Deep Learning, AI, Machine Learning, Developers, first neural network]
 ---
 <a href="javascript:history.back()" class="back-button">← Back</a>
+<style>
+    .back-button {
+  display: inline-block;
+  margin-top: 2em;
+  padding: 0.6em 1.2em;
+  background-color: #222;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #444;
+}
+
+</style>
 Welcome to the exciting world of neural networks! If you've ever wondered how machines can learn to recognize images, understand speech, or even play games better than humans, you're about to discover the magic behind it all. Today, we'll build your very first neural network from scratch – no PhD in mathematics required!
 
 ## What Exactly Is a Neural Network?
@@ -402,21 +420,4 @@ Keep experimenting, keep learning, and most importantly, keep building. The futu
 
 **Share this post**: If you found this helpful, share it with other aspiring AI engineers!
 
-<style>
-    .back-button {
-  display: inline-block;
-  margin-top: 2em;
-  padding: 0.6em 1.2em;
-  background-color: #222;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
 
-.back-button:hover {
-  background-color: #444;
-}
-
-</style>
