@@ -1,104 +1,82 @@
 ---
 layout: default
+title: Home
 ---
 
-<div class="home">
-  <h1>{{ site.title | escape }}</h1>
-  <p>{{ site.description | escape }}</p>
+<!-- AI Banner -->
+<!-- <img src="https://your-image-url.com/ai-banner.png" style="width:100%; border-radius:12px;"> -->
 
-  <!-- Featured Post Section -->
-  <section class="featured-post">
-    <h2>🚀 Featured: Build Your First Neural Network</h2>
-    <div class="featured-content">
-      <p>Ready to dive into AI? Learn how to build a neural network from scratch that can predict house prices! No PhD required - just curiosity and a willingness to learn.</p>
-      
-      <div class="featured-highlights">
-        <h3>What you'll learn:</h3>
-        <ul>
-          <li>🧠 How neural networks actually work (with simple analogies)</li>
-          <li>🏠 Build a house price predictor step-by-step</li>
-          <li>💻 Complete working Python code you can run today</li>
-          <li>📊 Visualize your network learning in real-time</li>
-          <li>🎯 Avoid common beginner mistakes</li>
-        </ul>
-      </div>
-      
-      <a href="{{ '/2025/05/22/how-to-write-your-first-neural-network.html' | relative_url }}" class="cta-button">
-        Start Building Your Neural Network →
-      </a>
-    </div>
-  </section>
+<h1>🤖 Shivam Prasad – AI Developer’s Lab</h1>
 
-  <!-- Recent Posts -->
-  <section class="recent-posts">
-    <h2>All Posts</h2>
-    <div class="post-list">
-      {% for post in site.posts limit: 5 %}
-        <article class="post-preview">
-          <h3>
-            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-          </h3>
-          <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
-          <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-        </article>
-      {% endfor %}
-    </div>
-  </section>
-</div>
+<p>Hi there! I'm <strong>Shivam Prasad</strong>, an AI/ML Developer with a passion for intelligent systems, smart automation, and secure coding.</p>
+
+<h2><span id="typing"></span><span class="cursor">|</span></h2>
+
+<p>I also dive into Web Development and Cybersecurity to make things not only smart — but also safe and usable.</p>
+
+<hr>
+
+<h2>🧠 What I Write About</h2>
+<ul>
+  <li>Machine Learning, LLMs, Computer Vision</li>
+  <li>SSH, Netcat, and Linux Hacking Tools</li>
+  <li>Web + AI Projects (Flask, APIs)</li>
+  <li>Real-World Debugging, Deployment & More</li>
+</ul>
+
+<hr>
+
+<h2>📘 Latest Blog Post</h2>
+<ul>
+  <li>📖 <a href="./posts/ssh-nc-handbook.md">SSH-NC Handbook</a></li>
+</ul>
+
+<hr>
+
+<h2>🔗 Let’s Connect</h2>
+<ul>
+  <li>GitHub → <a href="https://github.com/shivamprasad1001">@shivamprasad1001</a></li>
+</ul>
+
+<!-- Typing Effect Script -->
+<script>
+const words = ["AI Developer", "ML Engineer", "Open-Source Builder", "Web Hacker", "Linux Ninja"];
+let i = 0, j = 0, currentWord = "", isDeleting = false;
+
+function type() {
+  currentWord = words[i];
+  const typingElement = document.getElementById("typing");
+
+  if (isDeleting) {
+    typingElement.textContent = currentWord.substring(0, j--);
+  } else {
+    typingElement.textContent = currentWord.substring(0, j++);
+  }
+
+  if (!isDeleting && j === currentWord.length) {
+    isDeleting = true;
+    setTimeout(type, 1000);
+  } else if (isDeleting && j === 0) {
+    isDeleting = false;
+    i = (i + 1) % words.length;
+    setTimeout(type, 500);
+  }
+
+  setTimeout(type, isDeleting ? 50 : 100);
+}
+
+type();
+</script>
 
 <style>
-.featured-post {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  margin: 2rem 0;
-}
-
-.featured-content h3 {
-  color: #fff;
-  margin-top: 1.5rem;
-}
-
-.featured-highlights ul {
-  list-style: none;
-  padding: 0;
-}
-
-.featured-highlights li {
-  padding: 0.5rem 0;
-  border-left: 3px solid #fff;
-  padding-left: 1rem;
-  margin: 0.5rem 0;
-}
-
-.cta-button {
-  display: inline-block;
-  background: #fff;
-  color: #667eea;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  border-radius: 5px;
+.cursor {
   font-weight: bold;
-  margin-top: 1rem;
-  transition: transform 0.2s;
+  font-size: 24px;
+  animation: blink 0.7s infinite;
 }
-
-.cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.recent-posts {
-  margin-top: 3rem;
-}
-
-.post-preview {
-  border-bottom: 1px solid #eee;
-  padding: 1rem 0;
-}
-
-.post-preview:last-child {
-  border-bottom: none;
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
 </style>
