@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+    {% if page.date %}
+      <p class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          Published on {{ page.date | date: site.date_format | default: "%d %B %Y" }}
+        </time>
+        {% if page.author %}
+          • by {{ page.author }}
+        {% endif %}
+      </p>
+    {% endif %}
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  {% if page.tags.size > 0 %}
+    <div class="post-tags">
+      <strong>Tags:</strong>
+      {% for tag in page.tags %}
+        <span class="tag">{{ tag }}</span>{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</article>
+
+<style>
+.post-meta {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5em;
+}
+
+.post-meta time {
+  font-weight: 500;
+}
+
+.post-tags {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid #eee;
+  font-size: 0.9em;
+}
+
+.tag {
+  background: #f0f0f0;
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+  font-size: 0.8em;
+}
+</style>
