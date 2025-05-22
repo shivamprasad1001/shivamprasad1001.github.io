@@ -43,7 +43,10 @@ collections:
   posts:
     output: true
     permalink: /:collection/:year/:month/:day/:title/
-
+    
+# Date Format Settings
+date_format: "%d %B %Y"  # This will show "22 May 2025"
+show_date: true
 # Default Front Matter
 defaults:
   - scope:
