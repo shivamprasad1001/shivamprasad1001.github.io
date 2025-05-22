@@ -3,7 +3,8 @@ layout: default
 title: SSH-NC Handbook
 permalink: /ssh-nc-handbook/
 ---
-[← back](./)
+<a href="javascript:history.back()" class="back-button">← Back</a>
+
 # 🔐 SSH-NC Handbook: A Simple Guide to Remote Access & File Transfer
 
 Whether you're experimenting with Kali Linux, Termux, or just want to learn how to control devices on your local network, **SSH** and **Netcat (NC)** are powerful, lightweight tools for remote login, terminal chat, and file sharing.
