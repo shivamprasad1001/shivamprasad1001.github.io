@@ -1,5 +1,115 @@
-title: "My Blog"
-description: "A dark-themed tech blog using GitHub Pages"
+# Site Settings
+title: "TechInsights"
+tagline: "Exploring Technology, Innovation & Development"
+description: "Welcome to TechInsights , a platform where I, Shivam Prasad, delve into the realms of Artificial Intelligence, Web Development, and Cybersecurity. Here, I share insights, tutorials, and explorations that bridge the gap between intelligent systems and secure, user-friendly applications. If you have a specific blog name in mind or need assistance in selecting one, feel free to let me know, and I can provide more customized suggestions!"
+url: "https://shivamprasad1001.github.io/" 
+baseurl: "" # Leave empty if hosting at root
+
+# Author Information
+author:
+  name: "Shivam Prasad"
+  email: "shivamprasad1001.com"
+  bio: "AI/ML Developer & Technology Enthusiast"
+  location: "Delhi"
+  linkedin: "https://www.linkedin.com/in/shivam-prasad1001/"
+  github: "https://github.com/shivamprasad1001"
+  twitter: "https://x.com/Shivampr1001" # Optional
+
+# Theme Configuration
 remote_theme: pages-themes/cayman@v0.2.0
+
+# Plugins
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-remote-theme
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# Kramdown Settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Collections (for organizing content)
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:year/:month/:day/:title/
+
+# Default Front Matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+      author: "Shivam Prasad"
+      show_excerpts: true
+
+# Social Media & Contact
+social:
+  github: "https://github.com/shivamprasad1001"
+  linkedin: "https://www.linkedin.com/in/shivam-prasad1001/"
+  email: "shivamprasad1001.com"
+
+# SEO Settings
+lang: en_US
+timezone: America/New_York # Adjust to your timezone
+
+# Site Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about/"
+  - title: "Archive"
+    url: "/archive/"
+  - title: "Contact"
+    url: "/contact/"
+
+# Analytics (Optional - Add your tracking ID)
+google_analytics: # "UA-XXXXXXXX-X" or "G-XXXXXXXXXX"
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+
+# Include files
+include:
+  - _pages
+
+# Pagination (if you want paginated posts)
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Custom Variables
+brand_color: "#2c3e50"
+accent_color: "#3498db"
+
+# Comments (Optional - using Disqus)
+comments:
+  provider: # "disqus"
+  disqus:
+    shortname: 
+
+# Site Verification
+google_site_verification: # "your-verification-code"
+bing_site_verification: # "your-verification-code"
