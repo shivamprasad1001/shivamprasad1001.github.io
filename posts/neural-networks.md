@@ -5,7 +5,26 @@ author: Shivam Prasad
 permalink: /neural-networks/
 tags: [Neural Networks, Deep Learning, AI, Machine Learning, Developers]
 ---
-[← back](./)
+<a href="javascript:history.back()" class="back-button">← Back</a>
+<style>
+    .back-button {
+  display: inline-block;
+  margin-top: 2em;
+  padding: 0.6em 1.2em;
+  background-color: #222;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #444;
+}
+
+</style>
+
 # 🧠 Understanding Neural Networks: A Developer's Perspective
 
 As artificial intelligence continues to revolutionize industries, **neural networks** remain at the core of many cutting-edge solutions — from image recognition and language models to autonomous systems and recommendation engines.
