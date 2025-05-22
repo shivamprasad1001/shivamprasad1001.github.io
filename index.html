@@ -28,7 +28,8 @@ title: Home
 
 <h2>📘 Latest Blog Post</h2>
 <ul>
-  <li>📖 <a href="./posts/ssh-nc-handbook.md">SSH-NC Handbook</a></li>
+  <li>📖 <a href="/ssh-nc-handbook/">SSH-NC Handbook</a></li>
+
 </ul>
 
 <hr>
@@ -53,20 +54,28 @@ function type() {
     typingElement.textContent = currentWord.substring(0, j++);
   }
 
+  // Pause when a word is fully typed
   if (!isDeleting && j === currentWord.length) {
     isDeleting = true;
-    setTimeout(type, 1000);
-  } else if (isDeleting && j === 0) {
-    isDeleting = false;
-    i = (i + 1) % words.length;
-    setTimeout(type, 500);
+    setTimeout(type, 1500); // pause longer before deleting
+    return;
   }
 
-  setTimeout(type, isDeleting ? 50 : 100);
+  // Pause when word is deleted
+  if (isDeleting && j === 0) {
+    isDeleting = false;
+    i = (i + 1) % words.length;
+    setTimeout(type, 600); // pause before typing next word
+    return;
+  }
+
+  // Slower typing and deleting speeds
+  setTimeout(type, isDeleting ? 100 : 150);
 }
 
 type();
 </script>
+
 
 <style>
 .cursor {
