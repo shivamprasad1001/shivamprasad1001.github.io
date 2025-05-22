@@ -1,102 +1,58 @@
 ---
 layout: default
-title: Home
 ---
 
-<!-- AI Banner -->
-<!-- <img src="https://your-image-url.com/ai-banner.png" style="width:100%; border-radius:12px;"> -->
-
-<h1>🤖 Shivam Prasad – AI Developer’s Lab</h1>
-
-<p>Hi there! I'm <strong>Shivam Prasad</strong>, an AI/ML Developer with a passion for intelligent systems, smart automation, and secure coding.</p>
-
-<h2><span id="typing"></span><span class="cursor">|</span></h2>
-
-<p>I also dive into Web Development and Cybersecurity to make things not only smart — but also safe and usable.</p>
-
-<hr>
-
-<h2>🧠 What I Write About</h2>
-<ul>
-  <li>Machine Learning, LLMs, Computer Vision</li>
-  <li>SSH, Netcat, and Linux Hacking Tools</li>
-  <li>Web + AI Projects (Flask, APIs)</li>
-  <li>Real-World Debugging, Deployment & More</li>
-</ul>
-
-<hr>
-
-<h2>📝 Latest Blog Posts</h2>
-<ul>
-    <li>
-      <a href="posts/neural-networks.md">Understanding Neural Networks: A Developer's Perspective</a>
-      <p>A breakdown of neural network fundamentals, architectures, and best practices for developers.</p>
-    </li>
-   <li>
-      <a href="posts/ssh-nc-handbook.md">SSH & Netcat Handbook</a>
-      <p>Quick guide to using SSH and Netcat for communication and file transfer.</p>
-   </li>
-  <li>
-    <a href="post/Create Your_First_Neural_Network.md">How to Write Your First Neural Network: A Complete Beginner's Guide</a>
-    
-  </li>
+<div class="home">
+  <h1 class="page-heading">{{ site.title | escape }}</h1>
   
-</ul>
+  <p>{{ site.description | escape }}</p>
 
-<hr>
+  <div class="post-list">
+    {% for post in site.posts %}
+      <article class="post-preview">
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h2>
+        
+        <p class="post-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+            {{ post.date | date: "%B %d, %Y" }}
+          </time>
+        </p>
+        
+        <div class="post-excerpt">
+          {{ post.excerpt }}
+        </div>
+        
+        <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
+      </article>
+      
+      {% unless forloop.last %}<hr>{% endunless %}
+    {% endfor %}
+  </div>
 
-<h2>🔗 Let’s Connect</h2>
-<ul>
-  <li>GitHub → <a href="https://github.com/shivamprasad1001">@shivamprasad1001</a></li>
-</ul>
-
-<!-- Typing Effect Script -->
-<script>
-const words = ["AI Developer", "ML Engineer", "Open-Source Builder", "Web Hacker", "Linux Ninja"];
-let i = 0, j = 0, currentWord = "", isDeleting = false;
-
-function type() {
-  currentWord = words[i];
-  const typingElement = document.getElementById("typing");
-
-  if (isDeleting) {
-    typingElement.textContent = currentWord.substring(0, j--);
-  } else {
-    typingElement.textContent = currentWord.substring(0, j++);
-  }
-
-  // Pause when a word is fully typed
-  if (!isDeleting && j === currentWord.length) {
-    isDeleting = true;
-    setTimeout(type, 1500); // pause longer before deleting
-    return;
-  }
-
-  // Pause when word is deleted
-  if (isDeleting && j === 0) {
-    isDeleting = false;
-    i = (i + 1) % words.length;
-    setTimeout(type, 600); // pause before typing next word
-    return;
-  }
-
-  // Slower typing and deleting speeds
-  setTimeout(type, isDeleting ? 100 : 150);
-}
-
-type();
-</script>
-
-
-<style>
-.cursor {
-  font-weight: bold;
-  font-size: 24px;
-  animation: blink 0.7s infinite;
-}
-@keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
-}
-</style>
+  <!-- Pagination if you have many posts -->
+  {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+      {% endif %}
+      
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <strong>{{ page }}</strong>
+        {% elsif page == 1 %}
+          <a href="{{ '/' | relative_url }}">{{ page }}</a>
+        {% else %}
+          <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+        {% endif %}
+      {% endfor %}
+      
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>
