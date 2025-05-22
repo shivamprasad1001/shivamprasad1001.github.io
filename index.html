@@ -3,91 +3,391 @@ layout: default
 title: Home
 ---
 
-<!-- AI Banner -->
-<!-- <img src="https://your-image-url.com/ai-banner.png" style="width:100%; border-radius:12px;"> -->
-
-<h1>🤖 Shivam Prasad – AI Developer’s Lab</h1>
-
-<p>Hi there! I'm <strong>Shivam Prasad</strong>, an AI/ML Developer with a passion for intelligent systems, smart automation, and secure coding.</p>
-
-<h2><span id="typing"></span><span class="cursor">|</span></h2>
-
-<p>I also dive into Web Development and Cybersecurity to make things not only smart — but also safe and usable.</p>
-
-<hr>
-
-<h2>🧠 What I Write About</h2>
-<ul>
-  <li>Machine Learning, LLMs, Computer Vision</li>
-  <li>SSH, Netcat, and Linux Hacking Tools</li>
-  <li>Web + AI Projects (Flask, APIs)</li>
-  <li>Real-World Debugging, Deployment & More</li>
-</ul>
-
-<hr>
-
-<h2>📘 Latest Blog Post</h2>
-<ul>
-  <li>📖 <a href="/ssh-nc-handbook/">SSH-NC Handbook</a></li>
-  <li>📖 <a href="/neural-networks/">SSH-NC Handbook</a></li>
-  
-
-</ul>
-
-<hr>
-
-<h2>🔗 Let’s Connect</h2>
-<ul>
-  <li>GitHub → <a href="https://github.com/shivamprasad1001">@shivamprasad1001</a></li>
-</ul>
-
-<!-- Typing Effect Script -->
-<script>
-const words = ["AI Developer", "ML Engineer", "Open-Source Builder", "Web Hacker", "Linux Ninja"];
-let i = 0, j = 0, currentWord = "", isDeleting = false;
-
-function type() {
-  currentWord = words[i];
-  const typingElement = document.getElementById("typing");
-
-  if (isDeleting) {
-    typingElement.textContent = currentWord.substring(0, j--);
-  } else {
-    typingElement.textContent = currentWord.substring(0, j++);
-  }
-
-  // Pause when a word is fully typed
-  if (!isDeleting && j === currentWord.length) {
-    isDeleting = true;
-    setTimeout(type, 1500); // pause longer before deleting
-    return;
-  }
-
-  // Pause when word is deleted
-  if (isDeleting && j === 0) {
-    isDeleting = false;
-    i = (i + 1) % words.length;
-    setTimeout(type, 600); // pause before typing next word
-    return;
-  }
-
-  // Slower typing and deleting speeds
-  setTimeout(type, isDeleting ? 100 : 150);
-}
-
-type();
-</script>
-
-
 <style>
-.cursor {
-  font-weight: bold;
-  font-size: 24px;
-  animation: blink 0.7s infinite;
-}
-@keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
-}
+  /* Professional Color Palette */
+  :root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --accent-color: #3b82f6;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --bg-light: #f8fafc;
+    --bg-card: #ffffff;
+    --border-color: #e5e7eb;
+    --gradient-start: #667eea;
+    --gradient-end: #764ba2;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    color: white;
+    padding: 4rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .typing-container {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    min-height: 2rem;
+  }
+
+  .cursor {
+    font-weight: bold;
+    font-size: 1.5rem;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  /* Card Styles */
+  .content-section {
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .content-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .section-icon {
+    font-size: 1.25rem;
+  }
+
+  /* Skills Grid */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .skill-item {
+    background: var(--bg-light);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.2s ease;
+  }
+
+  .skill-item:hover {
+    background: #f1f5f9;
+    transform: translateX(4px);
+  }
+
+  .skill-title {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .skill-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  /* Blog Posts */
+  .blog-post {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    margin-bottom: 0.5rem;
+  }
+
+  .blog-post:hover {
+    background: var(--bg-light);
+    border-color: var(--border-color);
+    transform: translateX(8px);
+  }
+
+  .blog-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: var(--primary-color);
+  }
+
+  .blog-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+
+  .blog-link:hover {
+    color: var(--primary-color);
+  }
+
+  /* Social Links */
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  .social-link:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+    
+    .typing-container {
+      font-size: 1.25rem;
+    }
+    
+    .hero-section {
+      padding: 2rem 1rem;
+    }
+    
+    .content-section {
+      padding: 1.5rem;
+    }
+    
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .social-links {
+      justify-content: center;
+    }
+  }
+
+  /* Subtle animations */
+  .fade-in {
+    animation: fadeIn 0.8s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 </style>
+
+<!-- Hero Section -->
+<div class="hero-section fade-in">
+  <div class="hero-content">
+    <h1 class="hero-title">🤖 Shivam Prasad</h1>
+    <p class="hero-subtitle">
+      AI/ML Developer passionate about intelligent systems, smart automation, and secure coding. 
+      Building the future with code, one algorithm at a time.
+    </p>
+    <div class="typing-container">
+      <span id="typing"></span><span class="cursor">|</span>
+    </div>
+  </div>
+</div>
+
+<!-- What I Do Section -->
+<div class="content-section fade-in">
+  <h2 class="section-title">
+    <span class="section-icon">🧠</span>
+    What I Specialize In
+  </h2>
+  <div class="skills-grid">
+    <div class="skill-item">
+      <div class="skill-title">🤖 Machine Learning & AI</div>
+      <div class="skill-desc">Deep learning, LLMs, computer vision, and neural networks</div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-title">🔒 Cybersecurity</div>
+      <div class="skill-desc">SSH, Netcat, Linux security tools, and ethical hacking</div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-title">🌐 Web Development</div>
+      <div class="skill-desc">Flask APIs, full-stack development, and AI integration</div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-title">⚙️ DevOps & Deployment</div>
+      <div class="skill-desc">Real-world debugging, automation, and system optimization</div>
+    </div>
+  </div>
+</div>
+
+<!-- Latest Posts Section -->
+<div class="content-section fade-in">
+  <h2 class="section-title">
+    <span class="section-icon">📚</span>
+    Latest Blog Posts
+  </h2>
+  <div class="blog-post">
+    <span class="blog-icon">📖</span>
+    <a href="/ssh-nc-handbook/" class="blog-link">SSH-NC Handbook: Complete Guide to Network Tools</a>
+  </div>
+  <div class="blog-post">
+    <span class="blog-icon">🧠</span>
+    <a href="/neural-networks/" class="blog-link">Understanding Neural Networks from Scratch</a>
+  </div>
+</div>
+
+<!-- Connect Section -->
+<div class="content-section fade-in">
+  <h2 class="section-title">
+    <span class="section-icon">🔗</span>
+    Let's Connect
+  </h2>
+  <div class="social-links">
+    <a href="https://github.com/shivamprasad1001" class="social-link" target="_blank" rel="noopener">
+      <span>💻</span>
+      GitHub
+    </a>
+    <a href="mailto:your-email@example.com" class="social-link">
+      <span>📧</span>
+      Email
+    </a>
+    <a href="https://linkedin.com/in/yourprofile" class="social-link" target="_blank" rel="noopener">
+      <span>💼</span>
+      LinkedIn
+    </a>
+  </div>
+</div>
+
+<!-- Enhanced Typing Effect Script -->
+<script>
+  const words = [
+    "AI Developer", 
+    "ML Engineer", 
+    "Open-Source Contributor", 
+    "Security Researcher", 
+    "Linux Enthusiast"
+  ];
+  
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 100;
+  
+  function typeEffect() {
+    const typingElement = document.getElementById("typing");
+    const currentWord = words[wordIndex];
+    
+    if (isDeleting) {
+      typingElement.textContent = currentWord.substring(0, charIndex - 1);
+      charIndex--;
+      typingSpeed = 50;
+    } else {
+      typingElement.textContent = currentWord.substring(0, charIndex + 1);
+      charIndex++;
+      typingSpeed = 100;
+    }
+    
+    if (!isDeleting && charIndex === currentWord.length) {
+      isDeleting = true;
+      typingSpeed = 2000; // Pause at end of word
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      typingSpeed = 500; // Pause before next word
+    }
+    
+    setTimeout(typeEffect, typingSpeed);
+  }
+  
+  // Start the typing effect
+  typeEffect();
+  
+  // Add fade-in animation on scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+  
+  // Observe all content sections
+  document.querySelectorAll('.content-section').forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(20px)';
+    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(section);
+  });
+</script>
