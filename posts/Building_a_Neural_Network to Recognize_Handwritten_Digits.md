@@ -1,3 +1,11 @@
+---
+title: "Digit_detector: Building Your First AI Model to Recognize Handwritten Digits"
+date: 2025-05-23
+author: Shivam Prasad
+permalink: /Digit_detector/
+tags: [Neural Networks, Deep Learning, AI, Machine Learning, Developers, Digit_detector, MNIST]
+---
+
 # **digit_detector: Building Your First AI Model to Recognize Handwritten Digits**
 
 *A Complete Beginner's Guide to Creating, Training, and Deploying a Digit Classification Model*
