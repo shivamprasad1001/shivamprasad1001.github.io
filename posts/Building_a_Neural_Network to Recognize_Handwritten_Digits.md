@@ -5,8 +5,26 @@ author: Shivam Prasad
 permalink: /Digit_detector/
 tags: [Neural Networks, Deep Learning, AI, Machine Learning, Developers, Digit_detector, MNIST]
 ---
+<a href="javascript:history.back()" class="back-button">← Back</a>
+<style>
+    .back-button {
+  display: inline-block;
+  margin-top: 2em;
+  padding: 0.6em 1.2em;
+  background-color: #222;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
 
-# **digit_detector: Building Your First AI Model to Recognize Handwritten Digits**
+.back-button:hover {
+  background-color: #444;
+}
+
+</style>
+# **Digit Detector: Building Your First AI Model to Recognize Handwritten Digits**
 
 *A Complete Beginner's Guide to Creating, Training, and Deploying a Digit Classification Model*
 
