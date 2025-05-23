@@ -32,8 +32,7 @@ tags: [Neural Networks, Deep Learning, AI, Machine Learning, Developers, Digit_d
 
 ## Introduction
 
-Have you ever wondered how computers can recognize handwritten digits? In this comprehensive tutorial, we'll build an AI model from scratch that can identify and classify handwritten digits (0-9) with impressive accuracy. By the end of this post, you'll not only have a working digit detector but also know how to deploy it on Hugging Face for the world to use!
-
+Have you ever wondered how computers can recognize handwritten digits? In this comprehensive tutorial, we'll build an AI model from scratch that can identify and classify handwritten digits (0-9) with impressive accuracy. 
 ![Digit Detection Example](https://miro.medium.com/v2/resize:fit:720/format:webp/1*Xl6QITU7X2WM0UkE-k8G-w.png)
 
 
