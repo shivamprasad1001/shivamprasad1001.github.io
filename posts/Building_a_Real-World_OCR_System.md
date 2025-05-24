@@ -1,6 +1,9 @@
 ---
-Title: Building a Real-World OCR System: From Digits to Documents
-
+Title: "Building a Real-World OCR System: From Digits to Documents"
+date: 2025-05-24
+author: Shivam Prasad
+permalink: /Building_a_Real-World_OCR_System/
+tags: [Neural Networks, Deep Learning, AI, Machine Learning, Developers, Digit_detector, MNIST]
 ---
 
 # Building a Real-World OCR System: From Digits to Documents
