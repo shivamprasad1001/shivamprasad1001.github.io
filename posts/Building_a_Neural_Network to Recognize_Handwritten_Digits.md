@@ -28,8 +28,6 @@ tags: [Neural Networks, Deep Learning, AI, Machine Learning, Developers, Digit_d
 
 *A Complete Beginner's Guide to Creating, Training, and Deploying a Digit Classification Model*
 
----
-
 ## Introduction
 
 Have you ever wondered how computers can recognize handwritten digits? In this comprehensive tutorial, we'll build an AI model from scratch that can identify and classify handwritten digits (0-9) with impressive accuracy. 
