@@ -5,6 +5,25 @@ author: Shivam Prasad
 permalink: /Building_a_Real-World_OCR_System/
 tags: [Neural Networks, Deep Learning, AI, Machine Learning, Developers, Digit_detector, MNIST]
 ---
+<a href="javascript:history.back()" class="back-button">← Back</a>
+<style>
+    .back-button {
+  display: inline-block;
+  margin-top: 2em;
+  padding: 0.6em 1.2em;
+  background-color: #222;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #444;
+}
+
+</style>
 
 # Building a Real-World OCR System: From Digits to Documents
 
