@@ -1,5 +1,4 @@
-# 🤖 Shivam Prasad - Personal Blog & Portfolio
-
+# Shivam Prasad - Personal Blog
 Welcome to my personal blog website! I'm an AI/ML Developer passionate about intelligent systems, smart automation, and secure coding. This repository hosts my GitHub Pages site where I share my journey in building the future with code, one algorithm at a time.
 
 ## 🌐 Live Site
