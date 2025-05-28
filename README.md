@@ -14,7 +14,11 @@ I'm a technology enthusiast specializing in cutting-edge AI/ML solutions and cyb
 
 ### 🤖 Machine Learning & AI
 - Deep learning architectures and neural networks
-- Large Language Models (LLMs) and natural language processing
+- Large Language Models (LLMs) and natural language process### ⚙️ DevOps & Deployment
+- Real-world debugging and troubleshooting
+- Automation and CI/CD pipelines
+- System optimization and performance tuning
+- Cloud deployment and infrastructure managementing
 - Computer vision and image processing
 - AI model optimization and deployment
 
@@ -30,4 +34,6 @@ I'm a technology enthusiast specializing in cutting-edge AI/ML solutions and cyb
 - AI integration in web applications
 - RESTful API design and implementation
 
-- 
+  
+
+
