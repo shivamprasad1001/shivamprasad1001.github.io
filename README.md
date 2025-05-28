@@ -59,3 +59,10 @@ Feel free to reach out for collaborations, discussions, or just to connect:
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
+## 🔄 Updates
+
+This site is regularly updated with new content, projects, and insights. Check back often for the latest in AI/ML, cybersecurity, and web development!
+
+---
+
+*Building intelligent, secure, and scalable solutions for tomorrow's challenges.*
