@@ -34,6 +34,13 @@ I'm a technology enthusiast specializing in cutting-edge AI/ML solutions and cyb
 - AI integration in web applications
 - RESTful API design and implementation
 
-  
+## 🛠️ Technologies & Tools
+
+- **Languages**: Python, JavaScript, SQL
+- **ML/AI**: TensorFlow, PyTorch, Scikit-learn, OpenAI API
+- **Web**: Flask, HTML/CSS, JavaScript
+- **Security**: Linux tools, SSH, Network protocols
+- **DevOps**: Git, Docker, CI/CD, Cloud platforms
+- **Databases**: SQL, NoSQL solutions
 
 
