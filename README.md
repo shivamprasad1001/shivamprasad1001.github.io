@@ -24,3 +24,10 @@ I'm a technology enthusiast specializing in cutting-edge AI/ML solutions and cyb
 - Linux security tools and system hardening
 - Ethical hacking and penetration testing
 
+### 🌐 Web Development
+- Flask API development and backend services
+- Full-stack web application development
+- AI integration in web applications
+- RESTful API design and implementation
+
+- 
