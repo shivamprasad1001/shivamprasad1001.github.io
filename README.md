@@ -10,3 +10,17 @@ Visit my blog at: [shivamprasad1001.github.io](https://shivamprasad1001.github.i
 
 I'm a technology enthusiast specializing in cutting-edge AI/ML solutions and cybersecurity. My work focuses on creating intelligent systems that solve real-world problems while maintaining the highest security standards.
 
+## 💡 What I Specialize In
+
+### 🤖 Machine Learning & AI
+- Deep learning architectures and neural networks
+- Large Language Models (LLMs) and natural language processing
+- Computer vision and image processing
+- AI model optimization and deployment
+
+### 🔒 Cybersecurity
+- SSH and secure communication protocols
+- Netcat and network security tools
+- Linux security tools and system hardening
+- Ethical hacking and penetration testing
+
