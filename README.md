@@ -54,3 +54,5 @@ This blog features:
 ## 🤝 Connect With Me
 
 Feel free to reach out for collaborations, discussions, or just to connect:
+- **GitHub**: [@shivamprasad1001](https://github.com/shivamprasad1001)
+- **Website**: [shivamprasad.netlify.app](https://shivamprasad.netlify.app)
